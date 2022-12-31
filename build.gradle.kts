@@ -2,8 +2,8 @@ plugins {
     id("idea")
     id("eclipse")
 
-    kotlin("jvm") version "1.8.0"
-    kotlin("plugin.allopen") version "1.8.0"
+    kotlin("jvm") version "1.7.21"
+    kotlin("plugin.allopen") version "1.7.21"
 
     id("io.quarkus")
 }
