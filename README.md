@@ -1,4 +1,4 @@
-# grpc Project
+# Quarkus.gRPC Project
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
