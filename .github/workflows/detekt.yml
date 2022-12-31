@@ -16,7 +16,7 @@
 # later version of the Detekt CLI by modifing the $DETEKT_RELEASE_TAG
 # environment variable.
 ---
-name: Scan with Detekt
+name: Detekt
 
 on:
   # Triggers the workflow on push or pull request events but only for default and protected branches
