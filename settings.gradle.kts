@@ -17,3 +17,5 @@ pluginManagement {
 }
 
 rootProject.name = "quarkus"
+
+include("library")
