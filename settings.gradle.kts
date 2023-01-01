@@ -12,4 +12,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "grpc"
+rootProject.name = "quarkus"

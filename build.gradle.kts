@@ -16,27 +16,12 @@ repositories {
 val quarkusPlatformVersion: String by project
 val testContainersPlatformVersion: String by project
 
-group = "de.renatius.poc.quarkus"
+group = "de.renatius.poc"
 version = "0.1-SNAPSHOT"
 
 dependencies {
     implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusPlatformVersion}"))
-    implementation("io.quarkus:quarkus-grpc")
-    implementation("io.quarkus:quarkus-hibernate-orm")
-    implementation("io.quarkus:quarkus-flyway")
-    implementation("io.quarkus:quarkus-config-yaml")
-    implementation("io.quarkus:quarkus-kotlin")
-    implementation("io.quarkus:quarkus-jdbc-postgresql")
-    implementation("io.quarkus:quarkus-arc")
-
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-    testImplementation("io.quarkus:quarkus-junit5")
-
     testImplementation(enforcedPlatform("org.testcontainers:testcontainers-bom:${testContainersPlatformVersion}"))
-    testImplementation("org.testcontainers:junit-jupiter")
-    testImplementation("org.testcontainers:testcontainers")
-    testImplementation("org.testcontainers:postgresql")
 }
 
 java {
