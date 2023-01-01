@@ -25,10 +25,24 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          java-version: 17
+          distribution: temurin
 
       - name: Build with Gradle
         uses: gradle/gradle-build-action@3fbe033aaae657f011f88f29be9e65ed26bd29ef
         with:
-          arguments: build
+          arguments: build jacocoTestReport
+
+      #- name: Upload Report
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: report.xml
+      #    path: ${{ github.workspace }}/build/reports/jacoco/testCoverage/testCoverage.xml
+      #
+      #- name: Code coverage
+      #  uses: madrapps/jacoco-report@v1.3
+      #  with:
+      #    paths: ${{ github.workspace }}/build/reports/jacoco/testCoverage/testCoverage.xml
+      #    token: ${{ secrets.GITHUB_TOKEN }}
+      #    min-coverage-overall: 90
+      #    min-coverage-changed-files: 90
