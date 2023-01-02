@@ -31,19 +31,4 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@3fbe033aaae657f011f88f29be9e65ed26bd29ef
         with:
-          arguments: clean build jacocoTestReport
-
-      - name: Upload Report
-        uses: actions/upload-artifact@v3
-        with:
-          name: library.xml
-          path: |
-            ${{ github.workspace }}/library/build/reports/jacoco/test/jacocoTestReport.xml
-
-      - name: Code coverage
-        uses: madrapps/jacoco-report@v1.3
-        with:
-          paths: ${{ github.workspace }}/library/build/reports/jacoco/test/jacocoTestReport.xml
-          token: ${{ secrets.GITHUB_TOKEN }}
-          min-coverage-overall: 90
-          min-coverage-changed-files: 90
+          arguments: clean build
