@@ -1,0 +1,31 @@
+---
+"%dev":
+  quarkus:
+    datasource:
+      username: poc_quarkus
+      password: poc_quarkus
+      jdbc:
+        url: jdbc:postgresql://localhost:5432/poc_quarkus
+    hibernate-orm:
+      log:
+        sql: true
+      #sql-load-script: db/import-dev.sql
+
+"%test":
+  quarkus:
+    hibernate-orm:
+      log:
+        sql: true
+
+quarkus:
+  datasource:
+    db-kind: postgresql
+    jdbc:
+      max-size: 16
+  flyway:
+    migrate-at-start: true
+  hibernate-orm:
+    database:
+      generation: none
+    packages: de.renatius.poc.quarkus.library.entity
+    sql-load-script: no-file
