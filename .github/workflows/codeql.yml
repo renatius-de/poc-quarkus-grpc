@@ -40,13 +40,13 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          java-version: 17
+          distribution: temurin
 
       - name: Build with Gradle
         uses: gradle/gradle-build-action@3fbe033aaae657f011f88f29be9e65ed26bd29ef
         with:
-          arguments: build
+          arguments: clean build
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
