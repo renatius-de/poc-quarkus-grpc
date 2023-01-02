@@ -1,10 +1,5 @@
 # Quarkus POC Project
 
-[![Gradle](https://github.com/renatius-de/poc-quarkus/actions/workflows/gradle.yml/badge.svg)](https://github.com/renatius-de/poc-quarkus/actions/workflows/gradle.yml)
-[![Detekt](https://github.com/renatius-de/poc-quarkus/actions/workflows/detekt.yml/badge.svg)](https://github.com/renatius-de/poc-quarkus/actions/workflows/detekt.yml)
-[![CodeQL](https://github.com/renatius-de/poc-quarkus/actions/workflows/codeql.yml/badge.svg)](https://github.com/renatius-de/poc-quarkus/actions/workflows/codeql.yml)
-[![Qodana](https://github.com/renatius-de/poc-quarkus/actions/workflows/qodana.yml/badge.svg)](https://github.com/renatius-de/poc-quarkus/actions/workflows/qodana.yml)
-
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .

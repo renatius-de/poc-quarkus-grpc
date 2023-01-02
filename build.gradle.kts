@@ -1,8 +1,12 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     eclipse
     idea
-
+    jacoco
     java
+
+    id("org.sonarqube")
 
     kotlin("jvm")
 }
@@ -13,6 +17,7 @@ allprojects {
     version = "0.1-SNAPSHOT"
 
     apply(plugin = "java")
+    apply(plugin = "jacoco")
 
     repositories {
         mavenCentral()
@@ -24,7 +29,15 @@ allprojects {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
+    tasks.jacocoTestReport {
+        reports {
+            xml.required.set(true)
+        }
+    }
+
     tasks.withType<Test> {
+        finalizedBy(tasks.jacocoTestReport)
+
         systemProperty("java.util.logging.manager", "org.jboss.logmanager.LogManager")
 
         testLogging {
@@ -34,9 +47,17 @@ allprojects {
         useJUnitPlatform()
     }
 
-    tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    tasks.withType<KotlinCompile> {
         kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
         kotlinOptions.javaParameters = true
+    }
+}
+
+sonarqube {
+    properties {
+        property("sonar.projectKey", "renatius-de_poc-quarkus")
+        property("sonar.organization", "renatius-de")
+        property("sonar.host.url", "https://sonarcloud.io")
     }
 }
 
