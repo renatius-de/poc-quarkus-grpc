@@ -1,8 +1,9 @@
 plugins {
+    id("io.quarkus")
+    id("org.sonarqube")
+
     kotlin("jvm")
     kotlin("plugin.allopen")
-
-    id("io.quarkus")
 }
 
 val assertJVersion: String by project
