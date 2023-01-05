@@ -1,0 +1,7 @@
+{
+  "Exclude": [
+    "^\\.run/.*\\.run\\.xml",
+    "gradle\/",
+    "gradlew(\\.bat)?"
+  ]
+}
