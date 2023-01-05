@@ -20,4 +20,5 @@ pluginManagement {
 
 rootProject.name = "quarkus"
 
+include("grpc")
 include("library")
