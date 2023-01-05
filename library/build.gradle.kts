@@ -11,7 +11,7 @@ val dataFakerVersion: String by project
 val quarkusPlatformVersion: String by project
 
 dependencies {
-    implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:${quarkusPlatformVersion}"))
+    implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusPlatformVersion"))
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-config-yaml")
     implementation("io.quarkus:quarkus-flyway")
@@ -26,7 +26,7 @@ dependencies {
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
-    testImplementation("org.assertj:assertj-core:${assertJVersion}")
+    testImplementation("org.assertj:assertj-core:$assertJVersion")
 
-    testImplementation("net.datafaker:datafaker:${dataFakerVersion}")
+    testImplementation("net.datafaker:datafaker:$dataFakerVersion")
 }

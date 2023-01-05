@@ -35,9 +35,11 @@ class PersistenceIT {
         val professors = setOf(
             Professor(
                 UUID.randomUUID(), faker.name().firstName(), faker.name().nameWithMiddle(), faker.name().lastName()
-            ), Professor(
+            ),
+            Professor(
                 UUID.randomUUID(), faker.name().firstName(), faker.name().nameWithMiddle(), faker.name().lastName()
-            ), Professor(
+            ),
+            Professor(
                 UUID.randomUUID(), faker.name().firstName(), faker.name().nameWithMiddle(), faker.name().lastName()
             )
         )
@@ -50,13 +52,15 @@ class PersistenceIT {
                 faker.name().nameWithMiddle(),
                 faker.name().lastName(),
                 faker.numerify("#######")
-            ), Student(
+            ),
+            Student(
                 UUID.randomUUID(),
                 faker.name().firstName(),
                 faker.name().nameWithMiddle(),
                 faker.name().lastName(),
                 faker.numerify("#######")
-            ), Student(
+            ),
+            Student(
                 UUID.randomUUID(),
                 faker.name().firstName(),
                 faker.name().nameWithMiddle(),
