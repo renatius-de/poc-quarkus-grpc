@@ -9,7 +9,6 @@
     hibernate-orm:
       log:
         sql: true
-      #sql-load-script: db/import-dev.sql
 
 "%test":
   quarkus:
