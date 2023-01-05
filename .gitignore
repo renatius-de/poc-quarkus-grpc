@@ -1,23 +1,14 @@
-# Gradle
-.gradle/
-build/
-
-# Eclipse
-.project
-.classpath
-.settings/
-bin/
-
-# IntelliJ
-.idea
-*.ipr
 *.iml
+*.ipr
 *.iws
-
-# OSX
+.classpath
 .DS_Store
-
-# Local environment
 .env
-
+.gradle/
+.idea
+.project
+.settings/
+/super-linter.log
+bin/
+build/
 out/

@@ -1,0 +1,9 @@
+{
+  "Exclude": [
+    "\\.editorconfig$",
+    "\\.run\\.xml$",
+    "\\.sql",
+    "^gradlew$",
+    "^gradlew\\.bat$"
+  ]
+}
