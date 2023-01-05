@@ -34,11 +34,22 @@ class PersistenceIT {
     fun `list all courses`() {
         val professors = setOf(
             Professor(
-                UUID.randomUUID(), faker.name().firstName(), faker.name().nameWithMiddle(), faker.name().lastName()
-            ), Professor(
-                UUID.randomUUID(), faker.name().firstName(), faker.name().nameWithMiddle(), faker.name().lastName()
-            ), Professor(
-                UUID.randomUUID(), faker.name().firstName(), faker.name().nameWithMiddle(), faker.name().lastName()
+                UUID.randomUUID(),
+                faker.name().firstName(),
+                faker.name().nameWithMiddle(),
+                faker.name().lastName()
+            ),
+            Professor(
+                UUID.randomUUID(),
+                faker.name().firstName(),
+                faker.name().nameWithMiddle(),
+                faker.name().lastName()
+            ),
+            Professor(
+                UUID.randomUUID(),
+                faker.name().firstName(),
+                faker.name().nameWithMiddle(),
+                faker.name().lastName()
             )
         )
         professorRepository.persist(professors)
@@ -50,13 +61,15 @@ class PersistenceIT {
                 faker.name().nameWithMiddle(),
                 faker.name().lastName(),
                 faker.numerify("#######")
-            ), Student(
+            ),
+            Student(
                 UUID.randomUUID(),
                 faker.name().firstName(),
                 faker.name().nameWithMiddle(),
                 faker.name().lastName(),
                 faker.numerify("#######")
-            ), Student(
+            ),
+            Student(
                 UUID.randomUUID(),
                 faker.name().firstName(),
                 faker.name().nameWithMiddle(),
@@ -88,7 +101,11 @@ class PersistenceIT {
         courseRepository.persist(courses)
 
         val professor = Professor(
-            UUID.randomUUID(), faker.name().firstName(), faker.name().nameWithMiddle(), faker.name().lastName(), courses
+            UUID.randomUUID(),
+            faker.name().firstName(),
+            faker.name().nameWithMiddle(),
+            faker.name().lastName(),
+            courses
         )
         professorRepository.persist(professor)
 

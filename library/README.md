@@ -2,7 +2,7 @@
 
 This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
-If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
+If you want to learn more about Quarkus, please visit its website: [Quarkus.io](https://quarkus.io/).
 
 ## Running the application in dev mode
 
@@ -12,7 +12,8 @@ You can run your application in dev mode that enables live coding using:
 ./gradlew quarkusDev
 ```
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at http://localhost:8080/q/dev/.
+> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only
+> at [Dev UI](http://localhost:8080/q/dev/).
 
 ## Packaging and running the application
 
@@ -51,7 +52,8 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 
 You can then execute your native executable with: `./build/library-1.0-SNAPSHOT-runner`
 
-If you want to learn more about building native executables, please consult https://quarkus.io/guides/gradle-tooling.
+If you want to learn more about building native executables, please
+consult [Gradle Tooling](https://quarkus.io/guides/gradle-tooling).
 
 ## Related Guides
 
