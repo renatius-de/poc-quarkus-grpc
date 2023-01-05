@@ -50,11 +50,38 @@ Or, if you don't have GraalVM installed, you can run the native executable build
 ./gradlew build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
 ```
 
-You can then execute your native executable with: `./build/quarkus-1.0-SNAPSHOT-runner`
+You can then execute your native executable with:
+
+* `./library/build/library-1.0-SNAPSHOT-runner`
+* `./grpc/build/grpc-1.0-SNAPSHOT-runner`
 
 If you want to learn more about building native executables, please
 consult [Gradle Tooling](https://quarkus.io/guides/gradle-tooling).
 
 ## Related Guides
 
+- Hibernate ORM ([guide](https://quarkus.io/guides/hibernate-orm)): Define your persistent model with Hibernate ORM and
+  JPA
+- Flyway ([guide](https://quarkus.io/guides/flyway)): Handle your database schema migrations
+- Hibernate Validator ([guide](https://quarkus.io/guides/validation)): Validate object properties (field, getter) and
+  method parameters for your beans (REST, CDI, JPA)
+- Jacoco - Code Coverage ([guide](https://quarkus.io/guides/tests-with-coverage)): Jacoco test coverage support
+- YAML Configuration ([guide](https://quarkus.io/guides/config#yaml)): Use YAML to configure your Quarkus application
 - Kotlin ([guide](https://quarkus.io/guides/kotlin)): Write your services in Kotlin
+- JDBC Driver - PostgreSQL ([guide](https://quarkus.io/guides/datasource)): Connect to the PostgreSQL database via JDBC
+
+## Provided Code
+
+### YAML Config
+
+Configure your application with YAML
+
+[Related guide section...](https://quarkus.io/guides/config-reference#configuration-examples)
+
+The Quarkus application configuration is located in `src/main/resources/application.yml`.
+
+### Hibernate ORM
+
+Create your first JPA entity
+
+[Related guide section...](https://quarkus.io/guides/hibernate-orm)
