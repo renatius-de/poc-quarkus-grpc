@@ -20,3 +20,8 @@ updates:
     directory: /library/src/main/docker
     schedule:
       interval: weekly
+
+  - package-ecosystem: docker
+    directory: /rest/src/main/docker
+    schedule:
+      interval: weekly
