@@ -21,7 +21,6 @@ dependencies {
     implementation("io.quarkus:quarkus-jacoco")
     implementation("io.quarkus:quarkus-jdbc-postgresql")
     implementation("io.quarkus:quarkus-kotlin")
-    implementation("io.quarkus:quarkus-spring-data-jpa")
     testImplementation("io.quarkus:quarkus-junit5")
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
