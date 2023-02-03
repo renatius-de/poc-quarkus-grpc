@@ -1,5 +1,7 @@
 package de.renatius.poc.quarkus.library.entity
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase
+import org.apache.commons.lang3.RandomStringUtils
 import org.hibernate.annotations.ColumnDefault
 import java.util.*
 import javax.persistence.CascadeType
@@ -14,11 +16,11 @@ import javax.persistence.Table
 
 @Entity
 @Table(name = "student")
-data class Student(
+class Student(
     @Id
     @Column(name = "uid", nullable = false, insertable = false, updatable = false)
     @ColumnDefault("gen_random_uuid()")
-    var uid: UUID? = null,
+    var uid: UUID = UUID.randomUUID(),
 
     @Column(name = "firstname", nullable = false)
     var firstname: String? = null,
@@ -30,7 +32,7 @@ data class Student(
     var lastname: String? = null,
 
     @Column(name = "matriculation_number", unique = true, nullable = false, updatable = false, length = 7)
-    var matriculationNumber: String? = null,
+    var matriculationNumber: String = RandomStringUtils.randomAlphanumeric(7),
 
     @ManyToMany(targetEntity = Course::class, cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
     @JoinTable(
@@ -39,4 +41,4 @@ data class Student(
         inverseJoinColumns = [JoinColumn(name = "course_uid", referencedColumnName = "uid")]
     )
     var courses: Set<Course> = emptySet(),
-)
+) : PanacheEntityBase()

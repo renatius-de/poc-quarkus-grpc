@@ -1,4 +1,4 @@
-package library
+package de.renatius.poc.quarkus.library
 
 import de.renatius.poc.quarkus.library.entity.Course
 import de.renatius.poc.quarkus.library.entity.Professor
@@ -85,9 +85,10 @@ class PersistenceIT {
         val actualCourses = courseRepository.listAll()
 
         assertSoftly { softly ->
+            softly.assertThat(actualCourses).hasSize(1)
             softly.assertThat(actualCourses).isEqualTo(listOf(course))
-            softly.assertThat(actualCourses[0].professors).isEqualTo(professors)
-            softly.assertThat(actualCourses[0].students).isEqualTo(students)
+            softly.assertThat(actualCourses.first().professors).isEqualTo(professors)
+            softly.assertThat(actualCourses.first().students).isEqualTo(students)
         }
     }
 

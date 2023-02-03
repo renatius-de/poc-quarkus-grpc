@@ -7,6 +7,7 @@ plugins {
 }
 
 val assertJVersion: String by project
+val commonLangVersion: String by project
 val dataFakerVersion: String by project
 val quarkusPlatformVersion: String by project
 
@@ -22,6 +23,8 @@ dependencies {
     implementation("io.quarkus:quarkus-jdbc-postgresql")
     implementation("io.quarkus:quarkus-kotlin")
     testImplementation("io.quarkus:quarkus-junit5")
+
+    implementation("org.apache.commons:commons-lang3:$commonLangVersion")
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 

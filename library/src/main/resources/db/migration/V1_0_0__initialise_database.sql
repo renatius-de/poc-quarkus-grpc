@@ -11,7 +11,7 @@ CREATE TABLE professor
   uid         UUID DEFAULT gen_random_uuid() NOT NULL,
   firstname   VARCHAR(255)                   NOT NULL,
   middle_name VARCHAR(255),
-  surname     VARCHAR(255)                   NOT NULL,
+  lastname    VARCHAR(255)                   NOT NULL,
   CONSTRAINT pk_professor PRIMARY KEY (uid)
 );
 
