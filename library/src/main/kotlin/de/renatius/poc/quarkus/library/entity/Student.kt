@@ -32,6 +32,7 @@ class Student(
     var lastname: String? = null,
 
     @Column(name = "matriculation_number", unique = true, nullable = false, updatable = false, length = 7)
+    @SuppressWarnings("kotlin:S2245")
     var matriculationNumber: String = RandomStringUtils.randomAlphanumeric(7),
 
     @ManyToMany(targetEntity = Course::class, cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
