@@ -5,13 +5,3 @@ services:
       POSTGRES_PASSWORD: poc_quarkus
       POSTGRES_USER: poc_quarkus
       POSTGRES_DB: poc_quarkus
-
-  linter:
-    image: github/super-linter:latest
-    env_file:
-      - ./.github/super-linter.env
-    environment:
-      VALIDATE_DOCKERFILE_HADOLINT: false
-      RUN_LOCAL: true
-    volumes:
-      - .:/tmp/lint:rw
