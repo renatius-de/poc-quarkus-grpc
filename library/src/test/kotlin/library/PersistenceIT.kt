@@ -8,11 +8,11 @@ import de.renatius.poc.quarkus.library.repository.ProfessorRepository
 import de.renatius.poc.quarkus.library.repository.StudentRepository
 import io.quarkus.test.TestTransaction
 import io.quarkus.test.junit.QuarkusTest
+import jakarta.inject.Inject
 import net.datafaker.Faker
 import org.assertj.core.api.SoftAssertions.assertSoftly
 import org.junit.jupiter.api.Test
 import java.util.*
-import javax.inject.Inject
 
 @QuarkusTest
 @TestTransaction
