@@ -1,6 +1,0 @@
----
-version: 1.0
-failThreshold: 0
-projectJDK: temurin-17
-profile:
-  name: qodana.recommended

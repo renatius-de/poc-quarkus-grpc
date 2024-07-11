@@ -2,9 +2,9 @@
 name: Analyze
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
   workflow_dispatch:
 jobs:
   analyze:
@@ -17,7 +17,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        language: [ 'java' ]
+        language: ['java']
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -30,11 +30,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LOG_LEVEL: NOTICE
-      - name: Qodana Scan
-        uses: JetBrains/qodana-action@v2023.1.0
-        with:
-          args: --baseline,qodana.sarif.json
-      - name: Upload Sarif file from Qodana
-        uses: github/codeql-action/upload-sarif@v2
-        with:
-          sarif_file: ${{ runner.temp }}/qodana/results/qodana.sarif.json
