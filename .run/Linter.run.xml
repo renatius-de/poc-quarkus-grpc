@@ -4,17 +4,12 @@
       <settings>
         <option name="envFilePath" value="" />
         <option name="removeVolumesOnComposeDown" value="true" />
-        <option name="secondarySourceFiles">
-          <list>
-            <option value="docker-compose.override.yml" />
-          </list>
-        </option>
         <option name="services">
           <list>
             <option value="linter" />
           </list>
         </option>
-        <option name="sourceFilePath" value="docker-compose.yml" />
+        <option name="sourceFilePath" value="docker-compose.linter.yml" />
         <option name="upDetach" value="false" />
         <option name="upRemoveOrphans" value="true" />
       </settings>

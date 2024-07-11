@@ -1,5 +1,6 @@
 package de.renatius.poc.quarkus.library.entity
 
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase
 import org.hibernate.annotations.ColumnDefault
 import java.util.*
 import javax.persistence.CascadeType
@@ -23,7 +24,7 @@ class Professor(
         updatable = false
     )
     @ColumnDefault("gen_random_uuid()")
-    var uid: UUID? = null,
+    var uid: UUID = UUID.randomUUID(),
 
     @Column(name = "firstname", nullable = false)
     var firstname: String? = null,
@@ -31,7 +32,7 @@ class Professor(
     @Column(name = "middle_name")
     var middleName: String? = null,
 
-    @Column(name = "surname", nullable = false)
+    @Column(name = "lastname", nullable = false)
     var lastname: String? = null,
 
     @ManyToMany(targetEntity = Course::class, cascade = [CascadeType.ALL], fetch = FetchType.LAZY)
@@ -41,4 +42,4 @@ class Professor(
         inverseJoinColumns = [JoinColumn(name = "course_uid", referencedColumnName = "uid")]
     )
     var courses: Set<Course> = emptySet(),
-)
+) : PanacheEntityBase()

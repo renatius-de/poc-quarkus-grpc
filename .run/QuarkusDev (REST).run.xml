@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="All Tests" type="GradleRunConfiguration" factoryName="Gradle">
+  <configuration default="false" name="QuarkusDev (REST)" type="GradleRunConfiguration" factoryName="Gradle">
     <ExternalSystemSettings>
       <option name="executionName" />
       <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -11,7 +11,7 @@
       <option name="taskNames">
         <list>
           <option value="clean" />
-          <option value="test" />
+          <option value="rest:quarkusDev" />
         </list>
       </option>
       <option name="vmOptions" />

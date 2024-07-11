@@ -12,23 +12,26 @@ val dataFakerVersion: String by project
 val quarkusPlatformVersion: String by project
 
 dependencies {
+    implementation(project(":library"))
+
     implementation(enforcedPlatform("io.quarkus.platform:quarkus-bom:$quarkusPlatformVersion"))
     implementation("io.quarkus:quarkus-arc")
     implementation("io.quarkus:quarkus-config-yaml")
-    implementation("io.quarkus:quarkus-flyway")
     implementation("io.quarkus:quarkus-hibernate-orm")
     implementation("io.quarkus:quarkus-hibernate-orm-rest-data-panache")
-    implementation("io.quarkus:quarkus-hibernate-validator")
-    implementation("io.quarkus:quarkus-jacoco")
-    implementation("io.quarkus:quarkus-jdbc-postgresql")
     implementation("io.quarkus:quarkus-kotlin")
+    implementation("io.quarkus:quarkus-resteasy-reactive")
+    implementation("io.quarkus:quarkus-resteasy-reactive-jackson")
+    implementation("io.quarkus:quarkus-smallrye-openapi")
     testImplementation("io.quarkus:quarkus-junit5")
 
-    implementation("org.apache.commons:commons-lang3:$commonLangVersion")
+    testImplementation("io.rest-assured:rest-assured")
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     testImplementation("org.assertj:assertj-core:$assertJVersion")
 
     testImplementation("net.datafaker:datafaker:$dataFakerVersion")
+
+    testImplementation("org.apache.commons:commons-lang3:$commonLangVersion")
 }
