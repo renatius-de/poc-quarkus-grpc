@@ -9,13 +9,13 @@ data class ProfessorModel(
     var uid: UUID? = null,
 
     @JsonProperty("firstname", required = true)
-    var firstname: String,
+    var firstname: String? = null,
 
     @JsonProperty("middle_name")
     var middleName: String? = null,
 
     @JsonProperty("lastname", required = true)
-    var lastname: String,
+    var lastname: String? = null,
 
     @JsonIgnoreProperties("professors")
     @JsonProperty("courses")

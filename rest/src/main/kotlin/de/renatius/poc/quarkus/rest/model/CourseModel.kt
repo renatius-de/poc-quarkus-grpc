@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 import de.renatius.poc.quarkus.library.entity.Course
 import de.renatius.poc.quarkus.library.entity.Professor
-import de.renatius.poc.quarkus.library.entity.Student
+import io.quarkus.logging.Log
 import java.util.*
 import javax.validation.constraints.NotBlank
 
@@ -58,23 +58,13 @@ data class CourseModel(
         uid = uid ?: UUID.randomUUID()
         val professorsEntities = professors
             ?.map { professor ->
-                Professor(professor.uid!!, professor.firstname, professor.middleName, professor.lastname)
-            }
-            ?.toSet()
-            ?: emptySet()
-        val studentsEntities = students
-            ?.map { student ->
-                Student(
-                    student.uid!!,
-                    student.firstname,
-                    student.middleName,
-                    student.lastname,
-                    student.matriculationNumber
-                )
+                Log.info(professor)
+                Professor(professor.uid!!)
             }
             ?.toSet()
             ?: emptySet()
 
-        return Course(uid!!, title, professorsEntities, studentsEntities)
+
+        return Course(uid!!, title, professorsEntities)
     }
 }

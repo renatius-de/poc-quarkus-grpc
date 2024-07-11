@@ -9,3 +9,6 @@
     http:
       port: 8080
       ssl-port: 8443
+    datasource:
+      devservices:
+        enabled: true

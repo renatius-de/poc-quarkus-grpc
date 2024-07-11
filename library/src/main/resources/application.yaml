@@ -1,20 +1,18 @@
 ---
-"%dev":
-  quarkus:
-    datasource:
-      username: poc_quarkus
-      password: poc_quarkus
-      jdbc:
-        url: jdbc:postgresql://localhost:5432/poc_quarkus
-    hibernate-orm:
-      log:
-        sql: true
-
 "%test":
   quarkus:
     hibernate-orm:
       log:
         sql: true
+
+"%dev":
+  quarkus:
+    hibernate-orm:
+      database:
+        generation: drop-and-create
+      log:
+        sql: true
+      sql-load-script: import-dev.sql
 
 quarkus:
   datasource:
