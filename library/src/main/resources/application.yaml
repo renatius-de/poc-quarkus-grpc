@@ -12,6 +12,9 @@
 
 "%test":
   quarkus:
+    datasource:
+      devservices:
+        image-name: postgres:alpine
     hibernate-orm:
       log:
         sql: true
