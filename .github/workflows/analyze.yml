@@ -26,12 +26,12 @@ jobs:
       - name: Get Environment for SuperLinter
         run: cat .github/super-linter.env >> "$GITHUB_ENV"
       - name: SuperLinter Scan
-        uses: github/super-linter@v4
+        uses: github/super-linter@v5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LOG_LEVEL: NOTICE
       - name: Qodana Scan
-        uses: JetBrains/qodana-action@v2022.3.0
+        uses: JetBrains/qodana-action@v2023.1.0
         with:
           args: --baseline,qodana.sarif.json
       - name: Upload Sarif file from Qodana
